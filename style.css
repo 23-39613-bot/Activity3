@@ -1,0 +1,96 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
+  line-height: 1.6;
+  margin: 0;
+  padding-top: 70px; /* to offset fixed navbar */
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/bg.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.hero p {
+  font-size: 1.2rem;
+}
+
+/* Headings */
+h1, h2, h5 {
+  font-weight: bold;
+}
+
+/* Skills Section */
+.skill-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
+  cursor: pointer;
+}
+.skill-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.25);
+  background-color: #e6f2ff;
+}
+
+/* Projects Section */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* Buttons */
+.btn-dark {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.btn-dark:hover {
+  background-color: #444;
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  font-size: 0.9rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 576px) {
+  .hero h1 { font-size: 1.8rem; }
+  .hero p { font-size: 1rem; }
+}
+
+/* Intro Section Animation */
+#intro {
+  opacity: 0;
+  animation: fadeInIntro 2s forwards;
+}
+@keyframes fadeInIntro {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.intro-text {
+  animation: slideUp 1.5s ease-out forwards;
+}
+@keyframes slideUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Smooth scroll when navigating */
+html {
+  scroll-behavior: smooth;
+}
